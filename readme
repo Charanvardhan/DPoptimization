@@ -1,0 +1,72 @@
+Abstract
+
+ 
+This project investigates how different optimizers (SGD, SGD with momentum, Adam, and RMSprop) influence gradient stability and variance in training deep neural networks under differential privacy constraints. Specifically, we analyze the performance of ResNet and Wide ResNet architectures using DP-SGD and compare the gradient behavior across the optimizers. Our goal is to identify optimizers that minimize gradient instability due to privacy-induced noise, ultimately leading to better model accuracy under strict privacy constraints (epsilon ≤ 3.0 and delta = 10⁻⁵). The project systematically explores adaptive and momentum-based optimizers to identify strategies that enhance stability in differentially private deep learning.
+
+
+1	Training Objective
+
+The primary objective of this research is to develop a CIFAR-10 classifier trained under strict differential privacy constraints (ε ≤ 3.0, δ = 10⁻⁵), focusing on the stability of gradient updates. The goal is to determine which optimizer (DP-SGD, DP-SGD with momentum, DP-Adam, or DP-RMSprop) produces the most stable and efficient training while adhering to privacy guarantees. We will evaluate the optimizers based on their ability to manage privacy-induced noise and provide stable updates in the context of deep architectures like ResNet and Wide ResNet.
+ 
+2	Methodology – Optimizers
+
+This study explores several widely used optimizers—DP-SGD, DP-SGD with momentum, DP-Adam, and DP-RMSprop—under differential privacy constraints, each known for its unique handling of gradients during training.
+
+2.1    DP-SGD
+
+DP-SGD is the baseline optimizer for differentially private training. It clips and adds noise to gradients at each step, ensuring differential privacy guarantees. While effective, the added noise can lead to gradient instability, slowing convergence. DP-SGD’s basic approach provides the foundation against which more complex optimizers will be compared.
+
+2.2    DP-SGD with Momentum
+
+This version of DP-SGD introduces momentum, which accumulates past gradients to smooth out updates and accelerate convergence. Momentum is expected to reduce the fluctuations caused by privacy-induced noise, leading to more stable updates and improved convergence compared to plain DP-SGD.
+2.3    DP-Adam
+
+DP-Adam adapts the learning rate for each parameter based on first and second moments of the gradient. It adjusts for noise in gradient estimates, making it potentially more stable in differentially private training where gradients are noisy. We hypothesize that DP-Adam will outperform DP-SGD due to its ability to handle noise more effectively, especially in large, complex models like ResNet.
+
+2.4    DP-RMSprop
+
+DP-RMSprop also adapts learning rates but without momentum. It relies on the magnitude of recent gradients to adjust learning rates dynamically. This adaptive behavior can provide stable learning in noisy environments, making it a good candidate for DP training. We will investigate whether it performs better or worse than DP-Adam when applied to complex networks under DP constraints.
+
+3    Rationale
+
+Our approach systematically examines optimizers that balance gradient stability and privacy-induced noise management. We expect optimizers with momentum and adaptive learning rates (DP-Adam, DP-RMSprop) to outperform DP-SGD due to their capability to smooth updates in the presence of noise. This investigation is significant because optimizing gradient behavior under DP can lead to substantial improvements in model performance without sacrificing privacy. Prior work in differentially private optimization suggests that momentum and adaptive techniques can mitigate some of the instability caused by DP noise mechanisms .
+
+4    Experimental Setup
+
+4.1    System Description
+
+The experiments will be run on a GPU-enabled machine, leveraging the PyTorch deep learning framework. For privacy-compliant training, we will utilize the Opacus library, which integrates DP-SGD functionality into PyTorch, allowing us to train ResNet and Wide ResNet models under strict differential privacy guarantees.
+
+4.2    Measurements
+
+We will measure the following metrics to evaluate optimizer performance:
+Training Loss: Tracking the convergence behavior of different optimizers.
+Validation Accuracy: Measuring the generalization ability of models trained under DP constraints.
+Gradient Variance: Comparing how the variance of gradients evolves across different optimizers under differential privacy.
+Convergence Speed: Observing how quickly the models trained with each optimizer reach a given accuracy threshold.
+
+4.3    Design
+
+The experiments will be divided into phases. We will first establish a performance baseline using DP-SGD. Afterward, we will introduce DP-SGD with momentum, DP-Adam, and DP-RMSprop to the training process under identical privacy conditions (ε ≤ 3.0, δ = 10⁻⁵). The models to be trained include ResNet and Wide ResNet, allowing us to assess how network width affects optimizer performance under DP noise. Each experiment will be repeated multiple times to account for variability caused by the randomness of DP noise.
+
+The initial set of experiments will focus on simpler optimizers like DP-SGD and DP-SGD with momentum. Subsequent experiments will shift to more complex optimizers (DP-Adam, DP-RMSprop) and models (Wide ResNet). This will enable us to systematically identify which optimizer is best suited for achieving both stability and accuracy under differential privacy constraints.
+
+
+
+5    Significance
+
+Understanding the role of optimizers in differentially private training is crucial for improving both the stability and performance of deep learning models under privacy constraints. By analyzing the effects of momentum-based and adaptive learning rate optimizers in the context of DP-SGD, this project provides new insights into how gradient stability can be enhanced despite the noise introduced by DP mechanisms. The models chosen, such as ResNet and Wide ResNet, are industry standards, making the findings widely applicable. Our approach also opens avenues for further research on combining architectural innovations with differential privacy.
+
+Prior work has shown that DP-SGD can be challenging due to gradient instability, but our systematic comparison of different optimizers addresses this gap by focusing on the privacy-accuracy trade-off, helping improve differentially private training practices .
+
+Acknowledgments
+
+The development of our project can be followed on GitHub at: https://github.com/Charanvardhan/DPoptimization.
+
+References
+
+[1] Martín Abadi, Andy Chu, Ian Goodfellow, H Brendan McMahan, Ilya Mironov, Kunal Talwar, and Li Zhang. Deep learning with differential privacy. arXiv preprint arXiv:1607.00133, 2016.
+
+[2] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image recognition. arXiv preprint arXiv:1512.03385, 2016.
+
+[3] Diederik P. Kingma, Jimmy Ba. Adam: A method for stochastic optimization. arXiv preprint arXiv:1412.6980, 2014.
