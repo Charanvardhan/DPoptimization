@@ -1,0 +1,21 @@
+batch_size: [1024, 2048, 4096]
+lr: [1, 2]
+momentum: [0.0, 0.9]
+max_per_sample_grad_norm: [1.0]
+delta: [1e-5]
+ref_noise: [10.0, 6.0, 5.0]
+ref_B: [4096]
+ref_nb_steps: [875, 1125, 1593]
+max_physical_batch_size: [512]  # Add max_physical_batch_size with a default value
+# data_root: "/path/to/CIFAR10"
+# dump_path: "/path/to/results"
+transform: [8]
+freq_log: [50]
+freq_log_val: [100]
+poisson_sampling: [false, true]
+proportion: [1.0]
+# exp_name: "exp_run"
+ema: [False]
+local_rank: [-1]
+master_port: [-1] 
+

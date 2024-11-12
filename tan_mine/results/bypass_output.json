@@ -1,0 +1,119 @@
+[
+    {
+        "hyperparameters": {
+            "batch_size": 256,
+            "learning_rate": 4,
+            "momentum": 0,
+            "max_per_sample_grad_norm": 1,
+            "delta": 1e-05,
+            "transform": 0,
+            "proportion": 1,
+            "poisson_sampling": true
+        },
+        "training_log": [
+            {
+                "epoch": 0,
+                "current_loss": 1.9867527882258098,
+                "nb_steps": 196,
+                "top1_acc_model": 0.2748171368861024,
+                "average_grad_norm": 6.821348128492683
+            },
+            {
+                "epoch": 1,
+                "current_loss": 1.7745075821876526,
+                "nb_steps": 392,
+                "top1_acc_model": 0.4071053618297713,
+                "average_grad_norm": 8.531438558215145
+            },
+            {
+                "epoch": 2,
+                "current_loss": 1.6709028879801433,
+                "nb_steps": 588,
+                "top1_acc_model": 0.4280893752849977,
+                "average_grad_norm": 9.385180237221917
+            },
+            {
+                "epoch": 3,
+                "current_loss": 1.695808231830597,
+                "nb_steps": 784,
+                "top1_acc_model": 0.45045045045045046,
+                "average_grad_norm": 12.089159181145524
+            },
+            {
+                "epoch": 4,
+                "current_loss": 1.7171722650527954,
+                "nb_steps": 980,
+                "top1_acc_model": 0.4678750368405541,
+                "average_grad_norm": 11.465009256245203
+            },
+            {
+                "epoch": 5,
+                "current_loss": 1.8483609557151794,
+                "nb_steps": 1176,
+                "top1_acc_model": 0.40573770491803274,
+                "average_grad_norm": 12.75549281775518
+            },
+            {
+                "epoch": 6,
+                "current_loss": 1.3878557284673054,
+                "nb_steps": 1372,
+                "top1_acc_model": 0.5308927694789256,
+                "average_grad_norm": 13.128156579397778
+            },
+            {
+                "epoch": 7,
+                "current_loss": 1.6480446457862854,
+                "nb_steps": 1568,
+                "top1_acc_model": 0.5158730158730159,
+                "average_grad_norm": 13.817633105384994
+            },
+            {
+                "epoch": 8,
+                "current_loss": 1.6098727583885193,
+                "nb_steps": 1764,
+                "top1_acc_model": 0.5337145356830396,
+                "average_grad_norm": 14.232053911107203
+            },
+            {
+                "epoch": 9,
+                "current_loss": 1.6291897296905518,
+                "nb_steps": 1960,
+                "top1_acc_model": 0.5496507936507937,
+                "average_grad_norm": 15.130113282536605
+            },
+            {
+                "epoch": 10,
+                "current_loss": 1.4296301007270813,
+                "nb_steps": 2156,
+                "top1_acc_model": 0.5417248874398386,
+                "average_grad_norm": 16.201950102184448
+            },
+            {
+                "epoch": 11,
+                "current_loss": 1.5623470544815063,
+                "nb_steps": 2352,
+                "top1_acc_model": 0.5713048114087699,
+                "average_grad_norm": 17.427098195841396
+            },
+            {
+                "epoch": 12,
+                "current_loss": 1.300921380519867,
+                "nb_steps": 2500,
+                "top1_acc_model": 0.619187675070028,
+                "average_grad_norm": 16.46453231623558
+            }
+        ],
+        "final_results": {
+            "ema": {
+                "final_train_acc": 0.6,
+                "final_test_acc": 0.6196468431122449,
+                "final_epsilon": 332.860965436471,
+                "average_grad_norms": 12.501639702841416
+            },
+            "non_ema": {
+                "final_train_acc": 0.565234375,
+                "final_test_acc": 0.5791772959183673
+            }
+        }
+    }
+]

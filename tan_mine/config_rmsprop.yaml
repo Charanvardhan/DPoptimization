@@ -1,0 +1,201 @@
+runs:
+  run1:
+    batch_size: 1024
+    lr: 2
+    momentum: 0.9
+    max_per_sample_grad_norm: 1.0
+    delta: 1e-5
+    ref_noise: 10.0
+    ref_B: 4096
+    ref_nb_steps: 875
+    max_physical_batch_size: 512
+    # data_root: "/path/to/CIFAR10"
+    # dump_path: "/path/to/results"
+    transform: 2
+    freq_log: 20
+    freq_log_val: 100
+    poisson_sampling: false
+    proportion: 1.0
+    exp_name: "run1"
+    ema: false
+    local_rank: -1
+    master_port: -1   
+    optimizer: "rmsprop"
+  run2:
+    batch_size: 2048
+    lr: 2
+    momentum: 0.9
+    max_per_sample_grad_norm: 1.0
+    delta: 1e-5
+    ref_noise: 10.0
+    ref_B: 4096
+    ref_nb_steps: 875
+    max_physical_batch_size: 512
+    # data_root: "/path/to/CIFAR10"
+    # dump_path: "/path/to/results"
+    transform: 2
+    freq_log: 20
+    freq_log_val: 100
+    poisson_sampling: false
+    proportion: 1.0
+    exp_name: "run1"
+    ema: false
+    local_rank: -1
+    master_port: -1 
+    optimizer: "rmsprop"
+  run3:
+    batch_size: 4096
+    lr: 2
+    momentum: 0.9
+    max_per_sample_grad_norm: 1.0
+    delta: 1e-5
+    ref_noise: 10.0
+    ref_B: 4096
+    ref_nb_steps: 875
+    max_physical_batch_size: 512
+    # data_root: "/path/to/CIFAR10"
+    # dump_path: "/path/to/results"
+    transform: 2
+    freq_log: 20
+    freq_log_val: 100
+    poisson_sampling: false
+    proportion: 1.0
+    exp_name: "run1"
+    ema: false
+    local_rank: -1
+    master_port: -1 
+    optimizer: "rmsprop"
+  run4:
+    batch_size: 1024
+    lr: 2
+    momentum: 0.9
+    max_per_sample_grad_norm: 1.0
+    delta: 1e-5
+    ref_noise: 6.0
+    ref_B: 4096
+    ref_nb_steps: 1125
+    max_physical_batch_size: 512
+    # data_root: "/path/to/CIFAR10"
+    # dump_path: "/path/to/results"
+    transform: 2
+    freq_log: 20
+    freq_log_val: 100
+    poisson_sampling: false
+    proportion: 1.0
+    exp_name: "run4"
+    ema: false
+    local_rank: -1
+    master_port: -1 
+    optimizer: "rmsprop" 
+  run5:
+    batch_size: 2048
+    lr: 2
+    momentum: 0.9
+    max_per_sample_grad_norm: 1.0
+    delta: 1e-5
+    ref_noise: 6.0
+    ref_B: 4096
+    ref_nb_steps: 1125
+    max_physical_batch_size: 512
+    # data_root: "/path/to/CIFAR10"
+    # dump_path: "/path/to/results"
+    transform: 2
+    freq_log: 20
+    freq_log_val: 100
+    poisson_sampling: false
+    proportion: 1.0
+    exp_name: "run5"
+    ema: false
+    local_rank: -1
+    master_port: -1 
+    optimizer: "rmsprop"
+  run6:
+    batch_size: 4096
+    lr: 2
+    momentum: 0.9
+    max_per_sample_grad_norm: 1.0
+    delta: 1e-5
+    ref_noise: 6.0
+    ref_B: 4096
+    ref_nb_steps: 1125
+    max_physical_batch_size: 512
+    # data_root: "/path/to/CIFAR10"
+    # dump_path: "/path/to/results"
+    transform: 2
+    freq_log: 20
+    freq_log_val: 100
+    poisson_sampling: false
+    proportion: 1.0
+    exp_name: "run6"
+    ema: false
+    local_rank: -1
+    master_port: -1 
+    optimizer: "rmsprop"
+  run7:
+    batch_size: 1024
+    lr: 2
+    momentum: 0.9
+    max_per_sample_grad_norm: 1.0
+    delta: 1e-5
+    ref_noise: 5.0
+    ref_B: 4096
+    ref_nb_steps: 1593
+    max_physical_batch_size: 512
+    # data_root: "/path/to/CIFAR10"
+    # dump_path: "/path/to/results"
+    transform: 2
+    freq_log: 20
+    freq_log_val: 100
+    poisson_sampling: false
+    proportion: 1.0
+    exp_name: "run7"
+    ema: false
+    local_rank: -1
+    master_port: -1   
+    optimizer: "rmsprop"
+  run8:
+    batch_size: 2048
+    lr: 2
+    momentum: 0.9
+    max_per_sample_grad_norm: 1.0
+    delta: 1e-5
+    ref_noise: 5.0
+    ref_B: 4096
+    ref_nb_steps: 1593
+    max_physical_batch_size: 512
+    # data_root: "/path/to/CIFAR10"
+    # dump_path: "/path/to/results"
+    transform: 2
+    freq_log: 20
+    freq_log_val: 100
+    poisson_sampling: false
+    proportion: 1.0
+    exp_name: "run8"
+    ema: false
+    local_rank: -1
+    master_port: -1 
+    optimizer: "rmsprop"
+  run9:
+    batch_size: 4096
+    lr: 2
+    momentum: 0.9
+    max_per_sample_grad_norm: 1.0
+    delta: 1e-5
+    ref_noise: 5.0
+    ref_B: 4096
+    ref_nb_steps: 1593
+    max_physical_batch_size: 512
+    # data_root: "/path/to/CIFAR10"
+    # dump_path: "/path/to/results"
+    transform: 2
+    freq_log: 20
+    freq_log_val: 100
+    poisson_sampling: false
+    proportion: 1.0
+    exp_name: "run9"
+    ema: false
+    local_rank: -1
+    master_port: -1 
+    optimizer: "rmsprop"
+
+
